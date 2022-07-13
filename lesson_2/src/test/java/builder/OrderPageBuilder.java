@@ -7,8 +7,8 @@ public class OrderPageBuilder {
     private String fio;
     private String phoneNumber;
     private String region;
-    private String adress;
-    private String homeAdress;
+    private String street;
+    private String homeNumber;
     private String homeFlat;
     private String town;
 
@@ -30,8 +30,8 @@ public class OrderPageBuilder {
         return this;
     }
 
-    public OrderPageBuilder setAdress(String adress) {
-        this.adress = adress;
+    public OrderPageBuilder setStreet(String street) {
+        this.street = street;
         return this;
     }
 
@@ -40,8 +40,8 @@ public class OrderPageBuilder {
         return this;
     }
 
-    public OrderPageBuilder setHomeAdress(String homeAdress) {
-        this.homeAdress = homeAdress;
+    public OrderPageBuilder setHomeNumber(String homeNumber) {
+        this.homeNumber = homeNumber;
         return this;
     }
 
@@ -51,6 +51,6 @@ public class OrderPageBuilder {
     }
 
     public OrderPage build(){
-        return new OrderPage(fio, phoneNumber, region, adress, town, homeAdress, homeFlat);
+        return new OrderPage(fio, phoneNumber, region, street, town, homeNumber, homeFlat);
     }
 }
