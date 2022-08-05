@@ -1,0 +1,15 @@
+name: Maven Package
+
+on: [push]
+
+jobs:
+    Explore-GitHub-Actions:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v1
+      - run: curl -s https://aerokube.com/cm/bash  | bash
+      - run: chmod +x ./cm
+      - run: ./cm selenoid start --vnc
+      - run: ./cm selenoid-ui start
+      - run: mvn clean test
+  
